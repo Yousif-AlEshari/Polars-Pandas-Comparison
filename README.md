@@ -27,7 +27,6 @@ The goal of this project is to:
 | `Graphs.py`                 | Visualizes performance metrics and results. |
 | `Print.py`                  | Prints summaries, metadata, and operation logs. |
 | `metadata/`                 | Stores intermediate outputs, profiling logs, or schema descriptions. |
-| `temp.py`                   | (Ignored) A scratchpad or temporary testing area. |
 | `.gitignore`                | Prevents large and unnecessary files (like Parquet and CSVs) from being tracked. |
 
 ---
