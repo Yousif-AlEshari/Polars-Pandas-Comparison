@@ -1,0 +1,6 @@
+*.parquet
+*.csv
+*.xlsx
+__pycache__/
+*.pyc
+temp.py

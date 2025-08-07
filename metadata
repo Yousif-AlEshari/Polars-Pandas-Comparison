@@ -1,0 +1,50 @@
+Feature	Data Type	Description	Notes
+customer_id	string (UUID)	Unique identifier for each customer	Non-null, unique
+account_creation_date	datetime	Date the customer's account was created	Historical range up to 10 years
+age	int	Age of the customer in years	18–79
+gender	categorical	Gender identity	"male", "female", "non-binary", "unknown"
+country	categorical	Country of residence	"USA", "UK", "India", etc.
+account_status	categorical	Current status of the account	"active", "suspended", "closed", "dormant"
+kyc_verified	boolean	Whether the customer passed KYC (Know Your Customer) verification	High proportion True
+job	categorical	Customer occupation	e.g., "admin.", "technician", "unemployed"
+marital	categorical	Marital status	"single", "married", "divorced"
+education	categorical	Education level	"primary", "secondary", "tertiary", "unknown"
+default	categorical	Has defaulted on credit	"yes", "no", "unknown"
+housing	categorical	Has a housing loan	"yes", "no", "unknown"
+loan	categorical	Has a personal loan	"yes", "no", "unknown"
+transaction_id	string (UUID)	Unique identifier for each transaction	Non-null, unique
+transaction_date	datetime	Timestamp of the transaction	Last 12 months
+transaction_amount	float	Transaction value in base currency	Positive; exponential distribution
+transaction_currency	categorical	Currency used for transaction	"USD", "EUR", "INR", etc.
+transaction_type	categorical	Type of transaction	"purchase", "refund", etc.
+channel	categorical	Transaction access channel	"mobile_app", "web", etc.
+device_type	categorical	Device used to access the banking system	"mobile", "desktop", "tablet"
+device_os	categorical	OS used for the transaction	"iOS", "Android", etc.
+ip_address	string	IP address used for transaction	IPv4 format
+location	string	Geographical location of transaction	city, country format
+merchant_id	string / null	Unique ID of the merchant (if applicable)	Nullable
+login_frequency	int	Number of logins in a typical month	1–30
+avg_transaction_amount	float	Average transaction value for this customer	Normally distributed
+last_transaction_time_diff	int	Time since last transaction (in minutes)	Exponential distribution
+unusual_location	boolean	Transaction occurred from an atypical location	Anomaly flag
+is_vpn	boolean	Whether a VPN/proxy was used	5% of cases
+transaction_risk_score	float	Computed risk score for transaction (0–100)	Derived feature
+failed_login_attempts	int	Count of failed login attempts before success	Poisson distribution
+account_compromised	boolean	Whether the account is flagged as compromised	Very rare
+monthly_online_spending	float	Estimated monthly online spending	Gaussian distribution
+num_online_transactions	int	Number of online transactions per month	Poisson distribution
+avg_session_time	float	Average duration of user session (in minutes)	2–20 mins
+preferred_payment_method	categorical	Most used payment method	"credit_card", "debit_card", etc.
+uses_mobile_app	boolean	Uses mobile banking app	85% True
+uses_internet_banking	boolean	Uses online banking via browser	80% True
+subscribed_to_alerts	boolean	Subscribed to SMS/email transaction alerts	75% True
+has_savings_account	boolean	Whether customer has a savings account	90% True
+has_credit_card	boolean	Whether customer has a credit card	60% True
+has_overdraft	boolean	Overdraft facility availability	20% True
+has_investment_account	boolean	Investment or brokerage account	30% True
+campaign	int	Number of contacts during the current campaign	0–5, skewed low
+pdays	int	Days since last campaign contact (-1 = never)	-1 or 1–999
+previous	int	Number of prior contacts before the campaign	0–4
+poutcome	categorical	Result of previous marketing campaign	"success", "failure", "nonexistent"
+y	categorical	Whether the customer subscribed to term deposit (target label)	"yes", "no"
+
