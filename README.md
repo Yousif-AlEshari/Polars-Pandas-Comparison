@@ -31,7 +31,7 @@ The goal of this project is to:
 
 ---
 
-## 📊 Datasets Used
+## 📊 Datasets Used 
 
 *Real and synthetic datasets* in `.csv`, `.xlsx`, and `.parquet` formats (excluded from the repo due to size) include:
 
@@ -42,6 +42,18 @@ The goal of this project is to:
 > These files are used for benchmarking and generating profiling reports but are **not included** in this repo due to GitHub’s file size limits.
 
 ---
+
+## Results:
+![Rolling Window Runtime](RollingWindowRuntime-PolarsvsPandas.png)
+As it is shown above, using Rolloing window with Polars is more efficient, where it completed the task 10 times faster than Pandas
+
+
+![Memory Usage in MB](MemoryUsageComparison10kRows.png)
+Polars used in general less memory to complete the task, across all 3 phases, Initalizing the task to run, completing the task, and reserving a maximum unit of memory.
+
+![CPU Utilization](CPUUtilizationComparison500kRows.png)
+Polars utilized over 100% of CPU power, indicating that it uses threading to process and complete the tasks, where pandas run on a single process, it took 4 time more time to complete the same task
+
 
 ## 🛠️ Setup Instructions
 
